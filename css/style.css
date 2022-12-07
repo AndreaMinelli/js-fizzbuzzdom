@@ -17,3 +17,15 @@ h1 {
     font-size: 20px;
     background-color: rgb(19, 137, 178);
 }
+
+.square.bg-fizzbuzz {
+    background-color: rgb(240, 70, 111);
+}
+
+.square.bg-fizz {
+    background-color: rgb(12, 214, 161);
+}
+
+.square.bg-buzz {
+    background-color: rgb(255, 209, 102);
+}

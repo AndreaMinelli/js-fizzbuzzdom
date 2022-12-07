@@ -25,16 +25,7 @@ let unorderList = '<ul class="list-unstyled row p-4 justify-content-center">';
 //Ciclo di stampa numeri da 1 a 100
 for (let i = 1; i <= 100; i++) {
     let number = i;
-
-    //Se 'i' è multiplo di 3 o 5 o 3 e 5
-    if ((i % 5) === 0 && (i % 3) === 0) {
-        number = 'FizzBuzz';
-    } else if ((i % 3) === 0) {
-        number = 'Fizz';
-    } else if ((i % 5) === 0) {
-        number = 'Buzz';
-    }
-    //Creo il list item e lo aggiungo all'ul
+    //List Item default
     let listItem = `
     <li class="col d-flex align-items-center justify-content-center">
         <div class="square d-flex justify-content-center align-items-center fw-semibold"> 
@@ -42,6 +33,36 @@ for (let i = 1; i <= 100; i++) {
         </div>    
     </li>
     `;
+    //Se 'i' è multiplo di 3 o 5 o 3 e 5
+    if ((i % 5) === 0 && (i % 3) === 0) {
+        number = 'FizzBuzz';
+        listItem = `
+        <li class="col d-flex align-items-center justify-content-center ">
+             <div class="square d-flex justify-content-center align-items-center bg-fizzbuzz fw-semibold"> 
+               ${number}
+            </div>    
+        </li>
+        `;
+    } else if ((i % 3) === 0) {
+        number = 'Fizz';
+        listItem = `
+        <li class="col d-flex align-items-center justify-content-center ">
+             <div class="square d-flex justify-content-center align-items-center bg-fizz fw-semibold"> 
+               ${number}
+            </div>    
+        </li>
+        `;
+    } else if ((i % 5) === 0) {
+        number = 'Buzz';
+        listItem = `
+        <li class="col d-flex align-items-center justify-content-center ">
+             <div class="square d-flex justify-content-center align-items-center bg-buzz fw-semibold"> 
+               ${number}
+            </div>    
+        </li>
+        `;
+    }
+    //Creo il list item e lo aggiungo all'ul
     unorderList += listItem;
 }
 //Chiudo la lista
