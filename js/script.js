@@ -38,7 +38,7 @@ for (let i = 1; i <= 100; i++) {
         number = 'FizzBuzz';
         listItem = `
         <li class="col d-flex align-items-center justify-content-center ">
-             <div class="square d-flex justify-content-center align-items-center bg-fizzbuzz fw-semibold"> 
+            <div class="square d-flex justify-content-center align-items-center bg-fizzbuzz fw-semibold"> 
                ${number}
             </div>    
         </li>
@@ -47,7 +47,7 @@ for (let i = 1; i <= 100; i++) {
         number = 'Fizz';
         listItem = `
         <li class="col d-flex align-items-center justify-content-center ">
-             <div class="square d-flex justify-content-center align-items-center bg-fizz fw-semibold"> 
+            <div class="square d-flex justify-content-center align-items-center bg-fizz fw-semibold"> 
                ${number}
             </div>    
         </li>
@@ -56,7 +56,7 @@ for (let i = 1; i <= 100; i++) {
         number = 'Buzz';
         listItem = `
         <li class="col d-flex align-items-center justify-content-center ">
-             <div class="square d-flex justify-content-center align-items-center bg-buzz fw-semibold"> 
+            <div class="square d-flex justify-content-center align-items-center bg-buzz fw-semibold"> 
                ${number}
             </div>    
         </li>
