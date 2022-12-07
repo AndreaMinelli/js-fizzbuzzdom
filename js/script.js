@@ -19,13 +19,12 @@ Come abbiamo visto puoi  usare varie tecniche (style , className, classList)
 
 const container = document.querySelector('.container');
 
-let unorderList = '<ul class="list-unstyled">';
+let unorderList = '<ul class="list-unstyled row p-4 justify-content-center">';
 
 
 //Ciclo di stampa numeri da 1 a 100
 for (let i = 1; i <= 100; i++) {
     let number = i;
-
 
     //Se 'i' è multiplo di 3 o 5 o 3 e 5
     if ((i % 5) === 0 && (i % 3) === 0) {
@@ -36,7 +35,13 @@ for (let i = 1; i <= 100; i++) {
         number = 'Buzz';
     }
     //Creo il list item e lo aggiungo all'ul
-    let listItem = `<li>${number}</li>`;
+    let listItem = `
+    <li class="col d-flex align-items-center justify-content-center">
+        <div class="square d-flex justify-content-center align-items-center fw-semibold"> 
+            ${number}
+        </div>    
+    </li>
+    `;
     unorderList += listItem;
 }
 //Chiudo la lista

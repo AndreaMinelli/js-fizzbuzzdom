@@ -5,3 +5,15 @@ body {
 h1 {
     font-size: 80px;
 }
+
+.col {
+    flex: 0 0 150px;
+    height: 150px;
+}
+
+.col .square {
+    height: 120px;
+    width: 120px;
+    font-size: 20px;
+    background-color: rgb(19, 137, 178);
+}
