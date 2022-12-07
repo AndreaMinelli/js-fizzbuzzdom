@@ -19,54 +19,41 @@ Come abbiamo visto puoi  usare varie tecniche (style , className, classList)
 
 const container = document.querySelector('.container');
 
-let unorderList = '<ul class="list-unstyled row p-4 justify-content-center">';
-
+//Creo ul list
+const unorderList = document.createElement('ul');
+unorderList.classList.add('list-unstyled', 'row', 'p-4', 'justify-content-center');
 
 //Ciclo di stampa numeri da 1 a 100
 for (let i = 1; i <= 100; i++) {
+    //Creo list item
+    const listItem = document.createElement('li');
+    listItem.classList.add('col', 'd-flex', 'align-items-center', 'justify-content-center');
+    //Creo contenitore nel list item
+    const square = document.createElement('div');
+    square.classList.add('square', 'd-flex', 'justify-content-center', 'align-items-center', 'fw-semibold');
+    listItem.appendChild(square);
+
     let number = i;
-    //List Item default
-    let listItem = `
-    <li class="col d-flex align-items-center justify-content-center">
-        <div class="square d-flex justify-content-center align-items-center fw-semibold"> 
-            ${number}
-        </div>    
-    </li>
-    `;
+
     //Se 'i' è multiplo di 3 o 5 o 3 e 5
     if ((i % 5) === 0 && (i % 3) === 0) {
         number = 'FizzBuzz';
-        listItem = `
-        <li class="col d-flex align-items-center justify-content-center ">
-            <div class="square d-flex justify-content-center align-items-center bg-fizzbuzz fw-semibold"> 
-               ${number}
-            </div>    
-        </li>
-        `;
+        square.classList.add('bg-fizzbuzz');
     } else if ((i % 3) === 0) {
         number = 'Fizz';
-        listItem = `
-        <li class="col d-flex align-items-center justify-content-center ">
-            <div class="square d-flex justify-content-center align-items-center bg-fizz fw-semibold"> 
-               ${number}
-            </div>    
-        </li>
-        `;
+        square.classList.add('bg-fizz');
     } else if ((i % 5) === 0) {
         number = 'Buzz';
-        listItem = `
-        <li class="col d-flex align-items-center justify-content-center ">
-            <div class="square d-flex justify-content-center align-items-center bg-buzz fw-semibold"> 
-               ${number}
-            </div>    
-        </li>
-        `;
+        square.classList.add('bg-buzz');
     }
-    //Creo il list item e lo aggiungo all'ul
-    unorderList += listItem;
+
+    //List Item default
+    square.append(number);
+
+    //Aggiungo il list item all'ul
+    unorderList.appendChild(listItem);
 }
-//Chiudo la lista
-unorderList += '</ul>'
+
 
 //Stampo la lista in pagina
-container.innerHTML = unorderList;
+container.appendChild(unorderList);
