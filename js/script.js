@@ -15,6 +15,9 @@ Applica stili differenti agli elementi aggiunti al DOM nel BONUS 1, a seconda ch
 Come abbiamo visto puoi  usare varie tecniche (style , className, classList)
 */
 
+//Targhettizzo gli elementi in pagina necessari
+
+const container = document.querySelector('.container');
 
 
 //Ciclo di stampa numeri da 1 a 100
